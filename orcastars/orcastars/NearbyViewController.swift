@@ -1,14 +1,14 @@
 //
-//  FirstViewController.swift
+//  NearbyViewController.swift
 //  orcastars
 //
-//  Created by Student Account on 8/18/19.
+//  Created by James Hayes on 8/18/19.
 //  Copyright © 2019 James Hayes. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class NearbyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
