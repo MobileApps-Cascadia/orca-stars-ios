@@ -33,15 +33,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="KMf-lV-Jwm">
-                                <rect key="frame" x="0.0" y="334" width="414" height="37"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="pageIndicatorTintColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.49019607840000001" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-aC-w5U">
-                                <rect key="frame" x="0.0" y="371" width="414" height="442"/>
-                            </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tzg-M0-hzn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
                                 <subviews>
@@ -64,23 +55,40 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQ1-WE-HwE">
+                                        <rect key="frame" x="12" y="114" width="394" height="175"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="CaZ-kH-isi" secondAttribute="trailing" constant="8" id="0e4-8g-UKf"/>
                                     <constraint firstAttribute="height" constant="290" id="2xh-wc-Bii"/>
+                                    <constraint firstAttribute="bottom" secondItem="rQ1-WE-HwE" secondAttribute="bottom" constant="1" id="IKD-1Y-aED"/>
                                     <constraint firstItem="NGc-hR-t27" firstAttribute="top" secondItem="Tzg-M0-hzn" secondAttribute="top" constant="67" id="Ir2-19-aiI"/>
+                                    <constraint firstItem="rQ1-WE-HwE" firstAttribute="leading" secondItem="NGc-hR-t27" secondAttribute="leading" id="co4-Cj-Nf5"/>
+                                    <constraint firstItem="rQ1-WE-HwE" firstAttribute="top" secondItem="CaZ-kH-isi" secondAttribute="bottom" constant="17" id="ekL-QC-aqR"/>
                                     <constraint firstItem="NGc-hR-t27" firstAttribute="leading" secondItem="Tzg-M0-hzn" secondAttribute="leading" constant="12" id="jCO-x6-JrG"/>
                                     <constraint firstItem="CaZ-kH-isi" firstAttribute="centerY" secondItem="NGc-hR-t27" secondAttribute="centerY" id="o39-td-r4y"/>
                                     <constraint firstItem="CaZ-kH-isi" firstAttribute="leading" secondItem="NGc-hR-t27" secondAttribute="trailing" constant="15" id="tBz-cD-b67"/>
+                                    <constraint firstItem="rQ1-WE-HwE" firstAttribute="trailing" secondItem="CaZ-kH-isi" secondAttribute="trailing" id="tZ9-oa-OLd"/>
                                 </constraints>
                             </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="KMf-lV-Jwm">
+                                <rect key="frame" x="0.0" y="290" width="414" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="pageIndicatorTintColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.49019607840000001" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-aC-w5U">
+                                <rect key="frame" x="0.0" y="327" width="414" height="486"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Tzg-M0-hzn" secondAttribute="trailing" id="1fp-Rj-lV6"/>
                             <constraint firstItem="xYt-nz-jFi" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="5Yt-ig-mQQ"/>
-                            <constraint firstItem="KMf-lV-Jwm" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="290" id="88O-5a-Vos"/>
+                            <constraint firstItem="KMf-lV-Jwm" firstAttribute="top" secondItem="xYt-nz-jFi" secondAttribute="bottom" id="88O-5a-Vos"/>
                             <constraint firstItem="gC2-aC-w5U" firstAttribute="top" secondItem="KMf-lV-Jwm" secondAttribute="bottom" id="Art-Jm-p32"/>
                             <constraint firstItem="Tzg-M0-hzn" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="DoA-Oh-hsb"/>
                             <constraint firstItem="KMf-lV-Jwm" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="TXs-vh-RD2"/>
@@ -104,7 +112,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="-408"/>
+            <point key="canvasLocation" x="1089.8550724637682" y="-418.52678571428572"/>
+        </scene>
+        <!--Data View Controller-->
+        <scene sceneID="GJV-aS-My9">
+            <objects>
+                <viewController id="lzp-S9-xaf" customClass="DataViewController" customModule="orcastars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nmf-oF-uiv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGj-By-8Wp">
+                                <rect key="frame" x="174" y="431" width="67" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GeP-Us-6rW"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="YGj-By-8Wp" id="3h5-fz-Bfe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bm3-87-xJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045" y="-409"/>
+        </scene>
+        <!--Custom Page View Controller-->
+        <scene sceneID="5fJ-aw-0Lu">
+            <objects>
+                <pageViewController restorationIdentifier="CustomPageViewController" storyboardIdentifier="CustomPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="BQ2-Qh-ue6" customClass="CustomPageViewController" customModule="orcastars" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CK9-Di-hqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3025" y="-408"/>
         </scene>
         <!--Featured-->
         <scene sceneID="0KP-N9-30c">
