@@ -12,15 +12,14 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var LDGradientView: LDGradientView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         searchBar.clipsToBounds = true
-        searchBar.layer.cornerRadius = 20
-        
+        searchBar.layer.cornerRadius = 19
         
         pageControl.layer.shadowColor = UIColor.black.cgColor
         pageControl.layer.shadowPath = UIBezierPath(rect: pageControl.bounds).cgPath
@@ -34,6 +33,9 @@ class HomeViewController: UIViewController {
         pageControl.layer.shadowPath = UIBezierPath(ovalIn: contactRect).cgPath
         pageControl.layer.shadowRadius = 5
         pageControl.layer.shadowOpacity = 0.25
+                
+        // Do any additional setup after loading the view.
+
     }
 
     override func viewDidAppear(_ animated: Bool) {

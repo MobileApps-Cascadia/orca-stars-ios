@@ -54,7 +54,7 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" backgroundImage="icons8-menu-50"/>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CaZ-kH-isi">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search by name, category, or location" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CaZ-kH-isi">
                                         <rect key="frame" x="51" y="61" width="355" height="36"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.74759203767123283" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -97,13 +97,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="icons8-home-page-50" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="LDGradientView" destination="xYt-nz-jFi" id="4WJ-sf-gLO"/>
                         <outlet property="pageControl" destination="KMf-lV-Jwm" id="TlQ-ov-kRk"/>
                         <outlet property="searchBar" destination="CaZ-kH-isi" id="iMe-Cb-KJZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="747.82608695652175" y="-361.60714285714283"/>
+            <point key="canvasLocation" x="1590" y="-408"/>
         </scene>
         <!--Featured-->
         <scene sceneID="0KP-N9-30c">
@@ -129,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhL-Q3-nqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1635" y="-321"/>
+            <point key="canvasLocation" x="1935" y="809"/>
         </scene>
         <!--Nearby-->
         <scene sceneID="wg7-f3-ORb">
@@ -166,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="619"/>
+            <point key="canvasLocation" x="-346" y="1134"/>
         </scene>
         <!--About-->
         <scene sceneID="81k-5e-gZX">
@@ -192,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yi4-hN-n1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1655" y="358"/>
+            <point key="canvasLocation" x="981" y="1059"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
