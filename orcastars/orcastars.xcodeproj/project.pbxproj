@@ -16,6 +16,7 @@
 		3FF227D62309E826004F1EB0 /* orcastarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227D52309E826004F1EB0 /* orcastarsTests.swift */; };
 		3FF227E12309F0BA004F1EB0 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227E02309F0BA004F1EB0 /* FeaturedViewController.swift */; };
 		3FF227E32309F13F004F1EB0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227E22309F13F004F1EB0 /* AboutViewController.swift */; };
+		3FF227E5230A2F4B004F1EB0 /* LDGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227E4230A2F4B004F1EB0 /* LDGradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		3FF227D72309E826004F1EB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FF227E02309F0BA004F1EB0 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		3FF227E22309F13F004F1EB0 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		3FF227E4230A2F4B004F1EB0 /* LDGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDGradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				3FF227CC2309E826004F1EB0 /* Info.plist */,
 				3FF227E02309F0BA004F1EB0 /* FeaturedViewController.swift */,
 				3FF227E22309F13F004F1EB0 /* AboutViewController.swift */,
+				3FF227E4230A2F4B004F1EB0 /* LDGradientView.swift */,
 			);
 			path = orcastars;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				3FF227C32309E824004F1EB0 /* NearbyViewController.swift in Sources */,
 				3FF227BF2309E824004F1EB0 /* AppDelegate.swift in Sources */,
+				3FF227E5230A2F4B004F1EB0 /* LDGradientView.swift in Sources */,
 				3FF227E12309F0BA004F1EB0 /* FeaturedViewController.swift in Sources */,
 				3FF227E32309F13F004F1EB0 /* AboutViewController.swift in Sources */,
 				3FF227C12309E824004F1EB0 /* HomeViewController.swift in Sources */,
