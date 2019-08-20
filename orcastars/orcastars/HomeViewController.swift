@@ -142,7 +142,7 @@ extension HomeViewController: UIPageViewControllerDelegate, UIPageViewController
             return nil
         }
         
-        if (currentIndex == dataSource.count) {
+        if (currentIndex == dataSource.count-1) {
             return nil
         }
         
