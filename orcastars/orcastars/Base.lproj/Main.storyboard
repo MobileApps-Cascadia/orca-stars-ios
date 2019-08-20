@@ -281,9 +281,20 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IN1-6Q-Dhs">
                                         <rect key="frame" x="57" y="294" width="300" height="170"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inharmony" translatesAutoresizingMaskIntoConstraints="NO" id="WOI-bL-2Bl">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="CEF-IM-qZz"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="WOI-bL-2Bl" secondAttribute="trailing" id="Vve-WS-rrD"/>
                                             <constraint firstAttribute="width" constant="300" id="ZcY-OQ-Q5M"/>
+                                            <constraint firstItem="WOI-bL-2Bl" firstAttribute="top" secondItem="IN1-6Q-Dhs" secondAttribute="top" id="cos-sb-A8M"/>
+                                            <constraint firstItem="WOI-bL-2Bl" firstAttribute="leading" secondItem="IN1-6Q-Dhs" secondAttribute="leading" id="uTf-p1-epC"/>
                                             <constraint firstAttribute="height" constant="170" id="xhk-5T-VnX"/>
                                         </constraints>
                                     </view>
@@ -326,6 +337,7 @@
                         <outlet property="LDGradientView" destination="xYt-nz-jFi" id="4WJ-sf-gLO"/>
                         <outlet property="contentView" destination="A2u-Ic-Keg" id="BnO-hE-eIv"/>
                         <outlet property="menuButton" destination="NGc-hR-t27" id="P2R-A8-IDu"/>
+                        <outlet property="osomImageView" destination="WOI-bL-2Bl" id="XRV-m0-aWe"/>
                         <outlet property="osomView" destination="IN1-6Q-Dhs" id="e9A-7w-dSy"/>
                         <outlet property="searchBar" destination="CaZ-kH-isi" id="iMe-Cb-KJZ"/>
                     </connections>
@@ -502,5 +514,6 @@
         <image name="icons8-restaurant-30" width="30" height="30"/>
         <image name="icons8-shopping-cart-30" width="30" height="30"/>
         <image name="icons8-star-50" width="25" height="25"/>
+        <image name="inharmony" width="408" height="272"/>
     </resources>
 </document>

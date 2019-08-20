@@ -15,8 +15,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var LDGradientView: LDGradientView!
     
     
+    @IBOutlet weak var osomImageView: UIImageView!
     @IBOutlet weak var osomView: UIView!
-    private var cornerRadius: CGFloat = 15
+    private var cornerRadius: CGFloat = 19
     private var shadowColor: UIColor = UIColor.blue
     
     @IBOutlet weak var contentView: UIView!
@@ -27,11 +28,20 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // setup the pageview controller
         configurePageViewController()
+        
+        // round the top-left and top-right corners of the orcastar of the month card image
+        osomImageView.roundCorners(cornerRadius: 19)
         
         // make the search bar have rounded corners
         searchBar.clipsToBounds = true
-        searchBar.layer.cornerRadius = 19
+        searchBar.layer.cornerRadius = cornerRadius
+        
+//        // round the corners of the image in the orcastar of the month card
+//        osomImageView.clipsToBounds = true
+//        osomImageView.layer.cornerRadius = cornerRadius
         
         // give the orcastar of the month card have rounded corners
         osomView.clipsToBounds = true
@@ -111,6 +121,17 @@ class HomeViewController: UIViewController {
         return dataViewController
     }
 }
+
+extension UIView {
+    func roundCorners(cornerRadius: Double) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = self.bounds
+        maskLayer.path = path.cgPath
+        self.layer.mask = maskLayer
+    }
+}
+
 
 extension HomeViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
