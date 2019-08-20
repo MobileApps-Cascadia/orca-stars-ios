@@ -1,19 +1,18 @@
 //
-//  FeaturedViewController.swift
+//  CustomPageViewController.swift
 //  orcastars
 //
-//  Created by James Hayes on 8/18/19.
+//  Created by Student Account on 8/19/19.
 //  Copyright © 2019 James Hayes. All rights reserved.
 //
 
 import UIKit
 
-class FeaturedViewController: UIViewController {
-        
+class CustomPageViewController: UIPageViewController {
+
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         // Do any additional setup after loading the view.
     }
     
 }
-
