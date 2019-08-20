@@ -15,9 +15,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var LDGradientView: LDGradientView!
     
     
+    @IBOutlet weak var osomView: UIView!
+    private var cornerRadius: CGFloat = 15
+    private var shadowColor: UIColor = UIColor.blue
+    
     @IBOutlet weak var contentView: UIView!
     let dataSource = ["Article One", " Article Two", "Article Three", "Article Four" ]
     var currentViewControllerIndex = 0
+    
     
     
     override func viewDidLoad() {
@@ -28,21 +33,27 @@ class HomeViewController: UIViewController {
         searchBar.clipsToBounds = true
         searchBar.layer.cornerRadius = 19
         
-        // create the drop shadow for the page controller
-//        let width: CGFloat = 375
-//        let height: CGFloat = 37
-//        let shadowSize: CGFloat = 10
-//        let contactRect = CGRect(x: 0, y: height - (shadowSize * 0.4), width: width, height: shadowSize)
-
-//        pageControl.layer.shadowColor = UIColor.black.cgColor
-//        pageControl.layer.shadowPath = UIBezierPath(rect: pageControl.bounds).cgPath
-//        pageControl.layer.shouldRasterize = true
-//        pageControl.layer.shadowPath = UIBezierPath(ovalIn: contactRect).cgPath
-//        pageControl.layer.shadowRadius = 5
-//        pageControl.layer.shadowOpacity = 0.25
+        // give the orcastar of the month card have rounded corners
+        osomView.clipsToBounds = true
+        osomView.layer.cornerRadius = cornerRadius
+        
+        // add drop-shadow to osomView
+        displayShadow(view: osomView)
         
         // Do any additional setup after loading the view.
         
+    }
+    
+    // function for adding a drop-shadow effect to a UIView component
+    func displayShadow(view: UIView) {
+        view.layer.masksToBounds = false
+        view.layer.shadowColor = shadowColor.cgColor
+        view.layer.shadowOpacity = 0.2
+        view.layer.shadowOffset = CGSize(width: 0, height: 1)
+        view.layer.shadowRadius = 3
+        view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: cornerRadius).cgPath
+        view.layer.shouldRasterize = true
+        view.layer.rasterizationScale = UIScreen.main.scale
     }
     
     func configurePageViewController() {
