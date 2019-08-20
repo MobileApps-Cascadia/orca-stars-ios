@@ -42,9 +42,9 @@ class HomeViewController: UIViewController {
 //        pageControl.layer.shadowOpacity = 0.25
         
         // Do any additional setup after loading the view.
-
+        
     }
-
+    
     func configurePageViewController() {
         
         guard let pageViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: CustomPageViewController.self)) as? CustomPageViewController else {
