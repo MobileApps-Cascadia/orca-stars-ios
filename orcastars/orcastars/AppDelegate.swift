@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Change the tint color for the page controllers
         let pageController = UIPageControl.appearance()
-        pageController.currentPageIndicatorTintColor = .black
+        pageController.currentPageIndicatorTintColor = .purple
         pageController.pageIndicatorTintColor = .lightGray
         
         return true
