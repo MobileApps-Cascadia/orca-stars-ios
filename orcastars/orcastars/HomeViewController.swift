@@ -10,39 +10,62 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    // outlets to the menu button, searchbar,a and gradiant view
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var LDGradientView: LDGradientView!
     
     
-    @IBOutlet weak var contentView: UIView!
+    //outlets to the orcastar of the month ImageView and main View
+    @IBOutlet weak var osomImageView: UIImageView!
+    @IBOutlet weak var osomView: UIView!
+    private var cornerRadius: CGFloat = 19  // corner radius for most views
+    private var shadowColor: UIColor = UIColor.black    // shadow color
+    
+    
+    @IBOutlet weak var contentView: UIView! // reference outlet to the page controller content view
+    
+    // dummy data for the page view controller
     let dataSource = ["Article One", " Article Two", "Article Three", "Article Four" ]
-    var currentViewControllerIndex = 0
+    
+    var currentViewControllerIndex = 0  // keep track of the current page the page controller is at
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // setup the pageview controller
         configurePageViewController()
+        
+        // round the top-left and top-right corners of the orcastar of the month card image
+        osomImageView.roundCorners(cornerRadius: 19)
         
         // make the search bar have rounded corners
         searchBar.clipsToBounds = true
-        searchBar.layer.cornerRadius = 19
+        searchBar.layer.cornerRadius = cornerRadius
         
-        // create the drop shadow for the page controller
-//        let width: CGFloat = 375
-//        let height: CGFloat = 37
-//        let shadowSize: CGFloat = 10
-//        let contactRect = CGRect(x: 0, y: height - (shadowSize * 0.4), width: width, height: shadowSize)
+        // give the orcastar of the month card have rounded corners
+        osomView.clipsToBounds = true
+        osomView.layer.cornerRadius = cornerRadius
+        
+        // add drop-shadow to osomView
+        displayShadow(view: osomView)
 
-//        pageControl.layer.shadowColor = UIColor.black.cgColor
-//        pageControl.layer.shadowPath = UIBezierPath(rect: pageControl.bounds).cgPath
-//        pageControl.layer.shouldRasterize = true
-//        pageControl.layer.shadowPath = UIBezierPath(ovalIn: contactRect).cgPath
-//        pageControl.layer.shadowRadius = 5
-//        pageControl.layer.shadowOpacity = 0.25
-        
         // Do any additional setup after loading the view.
         
+    }
+    
+    // function for adding a drop-shadow effect to a UIView component
+    func displayShadow(view: UIView) {
+        view.layer.masksToBounds = false
+        view.layer.shadowColor = shadowColor.cgColor
+        view.layer.shadowOpacity = 0.2
+        view.layer.shadowOffset = CGSize(width: 0, height: 1)
+        view.layer.shadowRadius = 3
+        view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: cornerRadius).cgPath
+        view.layer.shouldRasterize = true
+        view.layer.rasterizationScale = UIScreen.main.scale
     }
     
     func configurePageViewController() {
@@ -100,6 +123,17 @@ class HomeViewController: UIViewController {
         return dataViewController
     }
 }
+
+extension UIView {
+    func roundCorners(cornerRadius: Double) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = self.bounds
+        maskLayer.path = path.cgPath
+        self.layer.mask = maskLayer
+    }
+}
+
 
 extension HomeViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
