@@ -10,19 +10,25 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    // outlets to the menu button, searchbar,a and gradiant view
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var LDGradientView: LDGradientView!
     
     
+    //outlets to the orcastar of the month ImageView and main View
     @IBOutlet weak var osomImageView: UIImageView!
     @IBOutlet weak var osomView: UIView!
-    private var cornerRadius: CGFloat = 19
-    private var shadowColor: UIColor = UIColor.blue
+    private var cornerRadius: CGFloat = 19  // corner radius for most views
+    private var shadowColor: UIColor = UIColor.black    // shadow color
     
-    @IBOutlet weak var contentView: UIView!
+    
+    @IBOutlet weak var contentView: UIView! // reference outlet to the page controller content view
+    
+    // dummy data for the page view controller
     let dataSource = ["Article One", " Article Two", "Article Three", "Article Four" ]
-    var currentViewControllerIndex = 0
+    
+    var currentViewControllerIndex = 0  // keep track of the current page the page controller is at
     
     
     
@@ -39,17 +45,13 @@ class HomeViewController: UIViewController {
         searchBar.clipsToBounds = true
         searchBar.layer.cornerRadius = cornerRadius
         
-//        // round the corners of the image in the orcastar of the month card
-//        osomImageView.clipsToBounds = true
-//        osomImageView.layer.cornerRadius = cornerRadius
-        
         // give the orcastar of the month card have rounded corners
         osomView.clipsToBounds = true
         osomView.layer.cornerRadius = cornerRadius
         
         // add drop-shadow to osomView
         displayShadow(view: osomView)
-        
+
         // Do any additional setup after loading the view.
         
     }
