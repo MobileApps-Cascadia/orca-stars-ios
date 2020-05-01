@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -93,19 +91,6 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNZ-xR-W9N">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCj-8h-Fvh" userLabel="Restaurants Button">
-                                                                <rect key="frame" x="19" y="33" width="30" height="30"/>
-                                                                <state key="normal" image="icons8-restaurant-30"/>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aor-Xk-9li">
-                                                                <rect key="frame" x="0.0" y="71" width="68" height="29"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="68" id="3FV-aC-x3P"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bars &amp; Nightlife" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="win-ll-sdc">
                                                                 <rect key="frame" x="98" y="71" width="65" height="29"/>
                                                                 <constraints>
@@ -145,28 +130,46 @@
                                                                 <rect key="frame" x="326.5" y="33" width="30" height="30"/>
                                                                 <state key="normal" image="icons8-shopping-cart-30"/>
                                                             </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hOj-po-rLk">
+                                                                <rect key="frame" x="8" y="33" width="68" height="52.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCj-8h-Fvh" userLabel="Restaurants Button">
+                                                                        <rect key="frame" x="19" y="0.0" width="30" height="30"/>
+                                                                        <state key="normal" image="icons8-restaurant-30"/>
+                                                                        <connections>
+                                                                            <segue destination="Uw6-Zx-v59" kind="show" id="fEk-Av-RFG"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aor-Xk-9li">
+                                                                        <rect key="frame" x="0.0" y="38" width="68" height="14.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="68" id="3FV-aC-x3P"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="vVz-NG-Yzn" firstAttribute="centerX" secondItem="hCn-WI-DJq" secondAttribute="centerX" id="4jV-Cv-9M6"/>
-                                                            <constraint firstItem="win-ll-sdc" firstAttribute="leading" secondItem="Aor-Xk-9li" secondAttribute="trailing" constant="30" id="4qC-ap-jbw"/>
                                                             <constraint firstItem="3r0-Vd-Mnf" firstAttribute="top" secondItem="win-ll-sdc" secondAttribute="top" id="88M-fJ-8CT"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Aor-Xk-9li" secondAttribute="bottom" id="9OA-ru-pdK"/>
                                                             <constraint firstAttribute="bottom" secondItem="win-ll-sdc" secondAttribute="bottom" id="9z6-gA-OSo"/>
-                                                            <constraint firstItem="Aor-Xk-9li" firstAttribute="top" secondItem="eCj-8h-Fvh" secondAttribute="bottom" constant="8" symbolic="YES" id="ICy-x3-rcB"/>
+                                                            <constraint firstItem="hOj-po-rLk" firstAttribute="top" secondItem="Q0I-eF-Oj0" secondAttribute="top" id="KC9-Ar-oqy"/>
+                                                            <constraint firstItem="win-ll-sdc" firstAttribute="leading" secondItem="hOj-po-rLk" secondAttribute="trailing" constant="22" id="LvI-fZ-xhq"/>
                                                             <constraint firstAttribute="bottom" secondItem="hCn-WI-DJq" secondAttribute="bottom" id="Mdv-0R-GPd"/>
                                                             <constraint firstAttribute="trailing" secondItem="hCn-WI-DJq" secondAttribute="trailing" id="RBg-aj-uC1"/>
+                                                            <constraint firstItem="hOj-po-rLk" firstAttribute="leading" secondItem="UNZ-xR-W9N" secondAttribute="leadingMargin" id="TRb-AP-kGu"/>
                                                             <constraint firstItem="hCn-WI-DJq" firstAttribute="leading" secondItem="3r0-Vd-Mnf" secondAttribute="trailing" constant="22" id="UUI-gq-Vne"/>
-                                                            <constraint firstItem="Q0I-eF-Oj0" firstAttribute="top" secondItem="eCj-8h-Fvh" secondAttribute="top" id="XNB-CJ-HIB"/>
-                                                            <constraint firstItem="eCj-8h-Fvh" firstAttribute="centerX" secondItem="Aor-Xk-9li" secondAttribute="centerX" id="XbI-sg-UYn"/>
-                                                            <constraint firstItem="win-ll-sdc" firstAttribute="top" secondItem="Aor-Xk-9li" secondAttribute="top" id="aH0-VV-puY"/>
-                                                            <constraint firstItem="Aor-Xk-9li" firstAttribute="leading" secondItem="UNZ-xR-W9N" secondAttribute="leading" id="dfH-eD-4Xh"/>
+                                                            <constraint firstItem="hOj-po-rLk" firstAttribute="top" secondItem="UNZ-xR-W9N" secondAttribute="top" constant="33" id="eLt-TQ-kjO"/>
                                                             <constraint firstItem="hCn-WI-DJq" firstAttribute="top" secondItem="3r0-Vd-Mnf" secondAttribute="top" id="fRv-jz-6RY"/>
                                                             <constraint firstAttribute="bottom" secondItem="3r0-Vd-Mnf" secondAttribute="bottom" id="l9o-x7-qRw"/>
                                                             <constraint firstItem="N93-zQ-gKE" firstAttribute="centerX" secondItem="3r0-Vd-Mnf" secondAttribute="centerX" id="nAQ-R4-lKA"/>
                                                             <constraint firstItem="vVz-NG-Yzn" firstAttribute="top" secondItem="N93-zQ-gKE" secondAttribute="top" id="okh-gc-guE"/>
+                                                            <constraint firstItem="hOj-po-rLk" firstAttribute="top" secondItem="N93-zQ-gKE" secondAttribute="top" id="rQh-KD-q2n"/>
                                                             <constraint firstItem="Q0I-eF-Oj0" firstAttribute="centerX" secondItem="win-ll-sdc" secondAttribute="centerX" id="t1a-nW-blk"/>
-                                                            <constraint firstItem="N93-zQ-gKE" firstAttribute="top" secondItem="eCj-8h-Fvh" secondAttribute="top" id="yp6-b3-SJb"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -512,7 +515,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Nearby View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="109.5" y="426.5" width="195" height="43"/>
+                                <rect key="frame" x="109" y="426.5" width="196" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -588,6 +591,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--RestaurantMenu-->
+        <scene sceneID="4JF-vv-nKI">
+            <objects>
+                <viewController id="Uw6-Zx-v59" userLabel="RestaurantMenu" customClass="RestaurantMenuViewController" customModule="orcastars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mxg-yC-G9L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RestaurantMenu View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLD-D7-pft" userLabel="RestaurantMenu View">
+                                <rect key="frame" x="37.5" y="399.5" width="339" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JLD-D7-pft" firstAttribute="centerY" secondItem="mxg-yC-G9L" secondAttribute="centerY" id="2Kd-B1-rDl"/>
+                            <constraint firstItem="JLD-D7-pft" firstAttribute="centerX" secondItem="mxg-yC-G9L" secondAttribute="centerX" id="AEG-Fd-49H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EE5-fb-0wk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gR0-dg-ZLw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6b-Yn-SZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1864" y="-1106"/>
         </scene>
     </scenes>
     <resources>
