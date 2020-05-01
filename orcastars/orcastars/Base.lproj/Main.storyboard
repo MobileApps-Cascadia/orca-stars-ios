@@ -137,7 +137,7 @@
                                                                         <rect key="frame" x="19" y="0.0" width="30" height="30"/>
                                                                         <state key="normal" image="icons8-restaurant-30"/>
                                                                         <connections>
-                                                                            <segue destination="Uw6-Zx-v59" kind="show" id="fEk-Av-RFG"/>
+                                                                            <segue destination="ail-RB-BDG" kind="show" id="d5P-Gv-W3Y"/>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aor-Xk-9li">
@@ -592,15 +592,15 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--RestaurantMenu-->
-        <scene sceneID="4JF-vv-nKI">
+        <!--RestaurantMenu Scene-->
+        <scene sceneID="PGa-Zb-VhE">
             <objects>
-                <viewController id="Uw6-Zx-v59" userLabel="RestaurantMenu" customClass="RestaurantMenuViewController" customModule="orcastars" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mxg-yC-G9L">
+                <viewController id="ail-RB-BDG" userLabel="RestaurantMenu Scene" customClass="RestaurantMenuViewController" customModule="orcastars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BwU-Cb-hcD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RestaurantMenu View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLD-D7-pft" userLabel="RestaurantMenu View">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RestaurantMenu View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRL-xX-ZUM">
                                 <rect key="frame" x="37.5" y="399.5" width="339" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -609,17 +609,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JLD-D7-pft" firstAttribute="centerY" secondItem="mxg-yC-G9L" secondAttribute="centerY" id="2Kd-B1-rDl"/>
-                            <constraint firstItem="JLD-D7-pft" firstAttribute="centerX" secondItem="mxg-yC-G9L" secondAttribute="centerX" id="AEG-Fd-49H"/>
+                            <constraint firstItem="GRL-xX-ZUM" firstAttribute="centerX" secondItem="BwU-Cb-hcD" secondAttribute="centerX" id="MKO-kO-lx8"/>
+                            <constraint firstItem="GRL-xX-ZUM" firstAttribute="centerY" secondItem="BwU-Cb-hcD" secondAttribute="centerY" id="lKN-Bz-klE"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="EE5-fb-0wk"/>
+                        <viewLayoutGuide key="safeArea" id="kwa-sH-qm1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gR0-dg-ZLw"/>
+                    <navigationItem key="navigationItem" id="dBY-HE-KJc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x6b-Yn-SZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9Q-nf-2d9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864" y="-1106"/>
+            <point key="canvasLocation" x="1868" y="-1146"/>
         </scene>
     </scenes>
     <resources>
