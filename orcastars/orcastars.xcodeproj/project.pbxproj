@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041C5CA0245BE18800940BC4 /* RestaurantMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C5C9F245BE18800940BC4 /* RestaurantMenuViewController.swift */; };
+		3F257FEF246CE7C000F4EB14 /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F257FEE246CE7C000F4EB14 /* Restaurants.swift */; };
+		3F257FF1246CE90700F4EB14 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F257FF0246CE90700F4EB14 /* DetailViewController.swift */; };
+		3F257FF4246CEA1E00F4EB14 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F257FF3246CEA1E00F4EB14 /* TableCell.swift */; };
 		3F9573B32464DE2C00CAA0A7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9573B22464DE2C00CAA0A7 /* UIView+Extension.swift */; };
+		3FCCD36B246C862B0048729A /* RestaurantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCCD369246C862B0048729A /* RestaurantsTableViewController.swift */; };
 		3FF227BF2309E824004F1EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227BE2309E824004F1EB0 /* AppDelegate.swift */; };
 		3FF227C12309E824004F1EB0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227C02309E824004F1EB0 /* HomeViewController.swift */; };
 		3FF227C62309E824004F1EB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF227C42309E824004F1EB0 /* Main.storyboard */; };
@@ -32,8 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		041C5C9F245BE18800940BC4 /* RestaurantMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuViewController.swift; sourceTree = "<group>"; };
+		3F257FEE246CE7C000F4EB14 /* Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
+		3F257FF0246CE90700F4EB14 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3F257FF3246CEA1E00F4EB14 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		3F9573B22464DE2C00CAA0A7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		3FCCD369246C862B0048729A /* RestaurantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsTableViewController.swift; sourceTree = "<group>"; };
 		3FF227BB2309E824004F1EB0 /* orcastars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orcastars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF227BE2309E824004F1EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF227C02309E824004F1EB0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +74,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F257FF2246CE9DA00F4EB14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F257FF3246CEA1E00F4EB14 /* TableCell.swift */,
+				3FF227E8230B5F28004F1EB0 /* CustomPageViewController.swift */,
+				3FF227E6230B5E0F004F1EB0 /* DataViewController.swift */,
+				3FF227E4230A2F4B004F1EB0 /* LDGradientView.swift */,
+				3FF227E22309F13F004F1EB0 /* AboutViewController.swift */,
+				3FF227C02309E824004F1EB0 /* HomeViewController.swift */,
+				3F9573B22464DE2C00CAA0A7 /* UIView+Extension.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3F257FF5246CEC9300F4EB14 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				3FF227BE2309E824004F1EB0 /* AppDelegate.swift */,
+				3FCCD369246C862B0048729A /* RestaurantsTableViewController.swift */,
+				3F257FF0246CE90700F4EB14 /* DetailViewController.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		3FCCD364246B1C190048729A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F257FEE246CE7C000F4EB14 /* Restaurants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3FF227B22309E824004F1EB0 = {
 			isa = PBXGroup;
 			children = (
@@ -89,18 +127,13 @@
 		3FF227BD2309E824004F1EB0 /* orcastars */ = {
 			isa = PBXGroup;
 			children = (
-				3FF227BE2309E824004F1EB0 /* AppDelegate.swift */,
-				3FF227C02309E824004F1EB0 /* HomeViewController.swift */,
 				3FF227C42309E824004F1EB0 /* Main.storyboard */,
-				3FF227C72309E826004F1EB0 /* Assets.xcassets */,
 				3FF227C92309E826004F1EB0 /* LaunchScreen.storyboard */,
+				3F257FF5246CEC9300F4EB14 /* TableView */,
+				3FCCD364246B1C190048729A /* Model */,
+				3F257FF2246CE9DA00F4EB14 /* Views */,
+				3FF227C72309E826004F1EB0 /* Assets.xcassets */,
 				3FF227CC2309E826004F1EB0 /* Info.plist */,
-				3FF227E22309F13F004F1EB0 /* AboutViewController.swift */,
-				3FF227E4230A2F4B004F1EB0 /* LDGradientView.swift */,
-				3FF227E6230B5E0F004F1EB0 /* DataViewController.swift */,
-				3FF227E8230B5F28004F1EB0 /* CustomPageViewController.swift */,
-				041C5C9F245BE18800940BC4 /* RestaurantMenuViewController.swift */,
-				3F9573B22464DE2C00CAA0A7 /* UIView+Extension.swift */,
 			);
 			path = orcastars;
 			sourceTree = "<group>";
@@ -218,10 +251,13 @@
 				3FF227E9230B5F28004F1EB0 /* CustomPageViewController.swift in Sources */,
 				3FF227E7230B5E0F004F1EB0 /* DataViewController.swift in Sources */,
 				3F9573B32464DE2C00CAA0A7 /* UIView+Extension.swift in Sources */,
-				041C5CA0245BE18800940BC4 /* RestaurantMenuViewController.swift in Sources */,
 				3FF227BF2309E824004F1EB0 /* AppDelegate.swift in Sources */,
+				3FCCD36B246C862B0048729A /* RestaurantsTableViewController.swift in Sources */,
 				3FF227E5230A2F4B004F1EB0 /* LDGradientView.swift in Sources */,
 				3FF227E32309F13F004F1EB0 /* AboutViewController.swift in Sources */,
+				3F257FF4246CEA1E00F4EB14 /* TableCell.swift in Sources */,
+				3F257FF1246CE90700F4EB14 /* DetailViewController.swift in Sources */,
+				3F257FEF246CE7C000F4EB14 /* Restaurants.swift in Sources */,
 				3FF227C12309E824004F1EB0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
