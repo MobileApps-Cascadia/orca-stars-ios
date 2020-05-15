@@ -12,10 +12,16 @@ class RestaurantsTableViewController: UITableViewController {
 
     var restaurants = Restaurants.createRestaurants()
     let identifier: String = "tableCell"
+    let customLightBlue = UIColor(red: 190/255, green: 209/255, blue: 224/255, alpha: 1)
+    let customBlue = UIColor(red: 5/255, green: 129/255, blue: 198/255, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        let gradientLayer = view.setGradientBackground(colorOne: customBlue, colorTwo: customLightBlue)
+        let bgView = UIView.init(frame: self.tableView.frame)
+        bgView.layer.insertSublayer(gradientLayer, at: 0)
+        self.tableView.backgroundView = bgView
     }
 
     // MARK: Segue Method
@@ -59,13 +65,14 @@ extension RestaurantsTableViewController {
 
 // MARK: - UITableView Delegate
 
-extension RestaurantsTableViewController {
-
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            restaurants.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .bottom)
-        }
-    }
-
-}
+//code to delete items in table, which we don't need
+//extension RestaurantsTableViewController {
+//
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            restaurants.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .bottom)
+//        }
+//    }
+//
+//}

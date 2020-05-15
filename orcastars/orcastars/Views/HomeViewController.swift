@@ -24,7 +24,8 @@ class HomeViewController: UIViewController {
         orcaImageView.layer.cornerRadius = cornerRadius
         searchBar.layer.cornerRadius = searchBar.frame.height / 2
         searchBar.clipsToBounds = true
-        view.setGradientBackground(colorOne: customBlue, colorTwo: customLightBlue)
+        let gradientlayer = view.setGradientBackground(colorOne: customBlue, colorTwo: customLightBlue)
+        view.layer.insertSublayer(gradientlayer, at: 0)
     }
 
     

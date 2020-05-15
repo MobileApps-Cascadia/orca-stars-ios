@@ -11,24 +11,23 @@ import Foundation
 struct Restaurants {
     let name: String
     let thumbnails: String
-    let prepTime: String
 }
 
 extension Restaurants {
     static func createRestaurants() -> [Restaurants] {
-        return [Restaurants(name: "Hyderabadi Biryani", thumbnails: "biriyani.jpg", prepTime: "3 hour"),
-                Restaurants(name: "South Indian Dosa", thumbnails: "dosa.jpg", prepTime: "30 min"),
-                Restaurants(name: "Fish Fry", thumbnails: "fish fry.jpg", prepTime: "1 hour"),
-                Restaurants(name: "Chicken Chettinad", thumbnails: "chicken.jpg", prepTime: "90 min"),
-                Restaurants(name: "Olan", thumbnails: "olan.jpg", prepTime: "40 min"),
-                Restaurants(name: "White Chocolate Donut", thumbnails: "white_chocolate_donut.jpg", prepTime: "1 hour"),
-                Restaurants(name: "Starbucks Coffee", thumbnails: "starbucks_coffee.jpg", prepTime: "2 hour"),
-                Restaurants(name: "Gongura Mamsam", thumbnails: "mutton.jpg", prepTime: "3 hour"),
-                Restaurants(name: "Instant Noodle with Egg", thumbnails: "Instant Noodle with Egg.jpg", prepTime: "65 min"),
-                Restaurants(name: "Green Tea", thumbnails: "green_tea.jpg", prepTime: "25 min"),
-                Restaurants(name: "Sushi", thumbnails: "sushi.jpg", prepTime: "1.5 hour"),
-                Restaurants(name: "Harry Poter Birthday Cake", thumbnails: "harry.jpg", prepTime: "2 hour"),
-                Restaurants(name: "Maharaja Burger veg", thumbnails: "veg-maharaja-mac.jpg", prepTime: "35 min")]
+        return [Restaurants(name: "Fishfood X", thumbnails: "fishfood_x.png"),
+                Restaurants(name: "The Green Bean", thumbnails: "the_green_bean.png"),
+                Restaurants(name: "StarStuck", thumbnails: "starstuck.png"),
+                Restaurants(name: "Grillbits", thumbnails: "grillbys.png"),
+                Restaurants(name: "Another Sushi Place", thumbnails: "another_sushi_place"),
+                Restaurants(name: "BurgerBox", thumbnails: "burgerbox.png"),
+                Restaurants(name: "Metatonic Cafe", thumbnails: "mtt_cafe.png"),
+                Restaurants(name: "RestStop #1", thumbnails: "orca_stars.png"),
+                Restaurants(name: "Verdant Drink", thumbnails: "orca_stars.png"),
+                Restaurants(name: "Jora's Brunch", thumbnails: "orca_stars.png"),
+                Restaurants(name: "Ty's Thai Food", thumbnails: "orca_stars.png"),
+        
+        ]
     }
 }
 
