@@ -13,7 +13,6 @@ class DetailViewController: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var prepTime: UILabel!
 
     var restaurants: Restaurants?
 
@@ -23,7 +22,6 @@ class DetailViewController: UIViewController {
             navigationItem.title = restaurants.name
             imageView.image = UIImage(named: restaurants.thumbnails)
             nameLabel.text = restaurants.name
-            prepTime.text = "Prep Time: " + restaurants.prepTime
         }
     }
 }

@@ -19,7 +19,6 @@
 		3FF227CB2309E826004F1EB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF227C92309E826004F1EB0 /* LaunchScreen.storyboard */; };
 		3FF227D62309E826004F1EB0 /* orcastarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227D52309E826004F1EB0 /* orcastarsTests.swift */; };
 		3FF227E32309F13F004F1EB0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227E22309F13F004F1EB0 /* AboutViewController.swift */; };
-		3FF227E5230A2F4B004F1EB0 /* LDGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227E4230A2F4B004F1EB0 /* LDGradientView.swift */; };
 		3FF227E7230B5E0F004F1EB0 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227E6230B5E0F004F1EB0 /* DataViewController.swift */; };
 		3FF227E9230B5F28004F1EB0 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227E8230B5F28004F1EB0 /* CustomPageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,7 +50,6 @@
 		3FF227D52309E826004F1EB0 /* orcastarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orcastarsTests.swift; sourceTree = "<group>"; };
 		3FF227D72309E826004F1EB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FF227E22309F13F004F1EB0 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		3FF227E4230A2F4B004F1EB0 /* LDGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDGradientView.swift; sourceTree = "<group>"; };
 		3FF227E6230B5E0F004F1EB0 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		3FF227E8230B5F28004F1EB0 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +78,6 @@
 				3F257FF3246CEA1E00F4EB14 /* TableCell.swift */,
 				3FF227E8230B5F28004F1EB0 /* CustomPageViewController.swift */,
 				3FF227E6230B5E0F004F1EB0 /* DataViewController.swift */,
-				3FF227E4230A2F4B004F1EB0 /* LDGradientView.swift */,
 				3FF227E22309F13F004F1EB0 /* AboutViewController.swift */,
 				3FF227C02309E824004F1EB0 /* HomeViewController.swift */,
 				3F9573B22464DE2C00CAA0A7 /* UIView+Extension.swift */,
@@ -253,7 +250,6 @@
 				3F9573B32464DE2C00CAA0A7 /* UIView+Extension.swift in Sources */,
 				3FF227BF2309E824004F1EB0 /* AppDelegate.swift in Sources */,
 				3FCCD36B246C862B0048729A /* RestaurantsTableViewController.swift in Sources */,
-				3FF227E5230A2F4B004F1EB0 /* LDGradientView.swift in Sources */,
 				3FF227E32309F13F004F1EB0 /* AboutViewController.swift in Sources */,
 				3F257FF4246CEA1E00F4EB14 /* TableCell.swift in Sources */,
 				3F257FF1246CE90700F4EB14 /* DetailViewController.swift in Sources */,

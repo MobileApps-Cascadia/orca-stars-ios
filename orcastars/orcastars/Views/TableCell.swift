@@ -12,13 +12,11 @@ import UIKit
 class TableCell: UITableViewCell {
 
     @IBOutlet private var nameLabel: UILabel!
-    @IBOutlet private var prepTimeLabel: UILabel!
     @IBOutlet private var thumbnailImageView: UIImageView!
 
     override func prepareForReuse() {
         super.prepareForReuse()
         nameLabel.text = nil
-        prepTimeLabel.text = nil
         thumbnailImageView.image = nil
     }
 
@@ -26,7 +24,6 @@ class TableCell: UITableViewCell {
 
     func configurateTheCell(_ restaurants: Restaurants) {
         nameLabel.text = restaurants.name
-        prepTimeLabel.text = "Prep Time: " + restaurants.prepTime
         thumbnailImageView.image = UIImage(named: restaurants.thumbnails)
     }
 
