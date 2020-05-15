@@ -381,7 +381,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="CdC-Tk-Hce" id="krM-a5-LMQ"/>
                                     <outlet property="thumbnailImageView" destination="rxj-P2-8hJ" id="qoC-e2-cTp"/>
-                                    <segue destination="y4L-TO-s2s" kind="showDetail" identifier="restaurantsDetail" trigger="accessoryAction" id="QWE-Rz-pgt"/>
+                                    <segue destination="y4L-TO-s2s" kind="showDetail" identifier="restaurantsDetail" id="egH-P8-mtb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
