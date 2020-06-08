@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043F1165248B49D100E2BB7E /* MoreMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F1164248B49D100E2BB7E /* MoreMenuViewController.swift */; };
 		3F257FEF246CE7C000F4EB14 /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F257FEE246CE7C000F4EB14 /* Restaurants.swift */; };
 		3F257FF1246CE90700F4EB14 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F257FF0246CE90700F4EB14 /* DetailViewController.swift */; };
 		3F257FF4246CEA1E00F4EB14 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F257FF3246CEA1E00F4EB14 /* TableCell.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043F1164248B49D100E2BB7E /* MoreMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuViewController.swift; sourceTree = "<group>"; };
 		3F257FEE246CE7C000F4EB14 /* Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
 		3F257FF0246CE90700F4EB14 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3F257FF3246CEA1E00F4EB14 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				3FF227E22309F13F004F1EB0 /* AboutViewController.swift */,
 				3FF227C02309E824004F1EB0 /* HomeViewController.swift */,
 				3F9573B22464DE2C00CAA0A7 /* UIView+Extension.swift */,
+				043F1164248B49D100E2BB7E /* MoreMenuViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				3F257FF4246CEA1E00F4EB14 /* TableCell.swift in Sources */,
 				3F257FF1246CE90700F4EB14 /* DetailViewController.swift in Sources */,
 				3F257FEF246CE7C000F4EB14 /* Restaurants.swift in Sources */,
+				043F1165248B49D100E2BB7E /* MoreMenuViewController.swift in Sources */,
 				3FF227C12309E824004F1EB0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
