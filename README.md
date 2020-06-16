@@ -9,9 +9,6 @@ OrcaStars: a Collaboration Between Orca Conservancy and Cascadia College
 
 	MVP:
 
-	Find OrcaStars businesses nearby
-	    Map zooms to yield significant results
-
 	Refine search with categorical filters, including
 	    Restaurants
 	    Bar & Nightlife
