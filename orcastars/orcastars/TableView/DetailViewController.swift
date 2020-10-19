@@ -38,4 +38,16 @@ class DetailViewController: UIViewController {
             view.layer.insertSublayer(gradientlayer, at: 0)
         }
     }
+    @IBAction func buttonDirections(_ sender: UIButton){
+        print("BUTTON PRESSED")
+        if (UIApplication.shared.canOpenURL(NSURL(string: "comgooglemaps://")! as URL)){
+            print("Got past IF statement")
+            UIApplication.shared.open(NSURL(string: "comgooglemaps://?saddr=&daddr=\(restaurants!.latitude),\(restaurants!.longitude)&directionsmode=driving")! as URL)
+            print("finished IF statement")
+        }
+        else{
+            NSLog("Can't use comgooglemaps://");
+            print("Didn't work")
+        }
+    }
 }

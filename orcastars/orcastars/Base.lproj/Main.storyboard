@@ -684,6 +684,9 @@
                                                 <state key="normal" title="Directions">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="buttonDirections:" destination="y4L-TO-s2s" eventType="touchUpInside" id="NTD-lq-Yus"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biE-Sk-NN6" userLabel="Indicator Button">
                                                 <rect key="frame" x="30" y="434" width="30" height="30"/>
