@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		043F1165248B49D100E2BB7E /* MoreMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F1164248B49D100E2BB7E /* MoreMenuViewController.swift */; };
+		3F07394B25524D74007B83F8 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07394A25524D74007B83F8 /* Business.swift */; };
 		3F257FEF246CE7C000F4EB14 /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F257FEE246CE7C000F4EB14 /* Restaurants.swift */; };
 		3F257FF1246CE90700F4EB14 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F257FF0246CE90700F4EB14 /* DetailViewController.swift */; };
 		3F257FF4246CEA1E00F4EB14 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F257FF3246CEA1E00F4EB14 /* TableCell.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		043F1164248B49D100E2BB7E /* MoreMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuViewController.swift; sourceTree = "<group>"; };
+		3F07394A25524D74007B83F8 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		3F257FEE246CE7C000F4EB14 /* Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
 		3F257FF0246CE90700F4EB14 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3F257FF3246CEA1E00F4EB14 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				3F257FEE246CE7C000F4EB14 /* Restaurants.swift */,
+				3F07394A25524D74007B83F8 /* Business.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				3F257FF4246CEA1E00F4EB14 /* TableCell.swift in Sources */,
 				3F257FF1246CE90700F4EB14 /* DetailViewController.swift in Sources */,
 				3F257FEF246CE7C000F4EB14 /* Restaurants.swift in Sources */,
+				3F07394B25524D74007B83F8 /* Business.swift in Sources */,
 				043F1165248B49D100E2BB7E /* MoreMenuViewController.swift in Sources */,
 				3FF227C12309E824004F1EB0 /* HomeViewController.swift in Sources */,
 			);
