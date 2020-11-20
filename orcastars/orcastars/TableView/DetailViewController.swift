@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
 
@@ -21,18 +22,18 @@ class DetailViewController: UIViewController {
     let customLightBlue = UIColor(red: 190/255, green: 209/255, blue: 224/255, alpha: 1)
     let customBlue = UIColor(red: 5/255, green: 129/255, blue: 198/255, alpha: 1)
 
-    var restaurants: Restaurants?
+    var business: BusinessEntity?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let restaurants = restaurants {
-            navigationItem.title = restaurants.name
-            imageView.image = UIImage(named: restaurants.thumbnails)
-            nameLabel.text = restaurants.name
-            descLabel.text = restaurants.description
-            photoView.image = UIImage(named: restaurants.photo)
-            locationLabel.text = restaurants.location
-            hoursLabel.text = restaurants.hours
+        if let business = business {
+            navigationItem.title = business.name
+            imageView.image = UIImage(named: business.logo!)
+            nameLabel.text = business.name
+            descLabel.text = business.description
+            photoView.image = UIImage(named: business.photo!)
+            locationLabel.text = business.address
+            hoursLabel.text = business.hours
             photoView.layer.cornerRadius = cornerRadius
             let gradientlayer = view.setGradientBackground(colorOne: customBlue, colorTwo: customLightBlue)
             view.layer.insertSublayer(gradientlayer, at: 0)
@@ -42,7 +43,7 @@ class DetailViewController: UIViewController {
         print("BUTTON PRESSED")
         if (UIApplication.shared.canOpenURL(NSURL(string: "comgooglemaps://")! as URL)){
             print("Got past IF statement")
-            UIApplication.shared.open(NSURL(string: "comgooglemaps://?saddr=&daddr=\(restaurants!.latitude),\(restaurants!.longitude)&directionsmode=driving")! as URL)
+            UIApplication.shared.open(NSURL(string: "comgooglemaps://?saddr=&daddr=\(business!.latitude),\(business!.longitude)&directionsmode=driving")! as URL)
             print("finished IF statement")
         }
         else{
