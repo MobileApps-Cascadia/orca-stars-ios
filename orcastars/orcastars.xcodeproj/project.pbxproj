@@ -14,6 +14,7 @@
 		3F257FF4246CEA1E00F4EB14 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F257FF3246CEA1E00F4EB14 /* TableCell.swift */; };
 		3F9573B32464DE2C00CAA0A7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9573B22464DE2C00CAA0A7 /* UIView+Extension.swift */; };
 		3FCCD36B246C862B0048729A /* RestaurantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCCD369246C862B0048729A /* RestaurantsTableViewController.swift */; };
+		3FE8479D256C9B8E0058AF9E /* businessdata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3FE8479C256C9B8E0058AF9E /* businessdata.csv */; };
 		3FF227BF2309E824004F1EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227BE2309E824004F1EB0 /* AppDelegate.swift */; };
 		3FF227C12309E824004F1EB0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF227C02309E824004F1EB0 /* HomeViewController.swift */; };
 		3FF227C62309E824004F1EB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF227C42309E824004F1EB0 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		3F257FF3246CEA1E00F4EB14 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		3F9573B22464DE2C00CAA0A7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		3FCCD369246C862B0048729A /* RestaurantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsTableViewController.swift; sourceTree = "<group>"; };
+		3FE8479C256C9B8E0058AF9E /* businessdata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = businessdata.csv; path = ../../../../../Downloads/businessdata.csv; sourceTree = "<group>"; };
 		3FF227BB2309E824004F1EB0 /* orcastars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orcastars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF227BE2309E824004F1EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF227C02309E824004F1EB0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		3F257FF5246CEC9300F4EB14 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				3FE8479C256C9B8E0058AF9E /* businessdata.csv */,
 				3FF227BE2309E824004F1EB0 /* AppDelegate.swift */,
 				3FF632D225672BD800A88276 /* orcastars.xcdatamodeld */,
 				3FCCD369246C862B0048729A /* RestaurantsTableViewController.swift */,
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE8479D256C9B8E0058AF9E /* businessdata.csv in Resources */,
 				3FF227CB2309E826004F1EB0 /* LaunchScreen.storyboard in Resources */,
 				3FF227C82309E826004F1EB0 /* Assets.xcassets in Resources */,
 				3FF227C62309E824004F1EB0 /* Main.storyboard in Resources */,

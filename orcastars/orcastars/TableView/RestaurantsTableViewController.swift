@@ -11,41 +11,46 @@ import CoreData
 
 class RestaurantsTableViewController: UITableViewController {
 
-    var businessArray: [NSManagedObject] = []
+    var businessArray: [BusinessEntity] = []
     let identifier: String = "tableCell"
     let customLightBlue = UIColor(red: 190/255, green: 209/255, blue: 224/255, alpha: 1)
     let customBlue = UIColor(red: 5/255, green: 129/255, blue: 198/255, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
         let gradientLayer = view.setGradientBackground(colorOne: customBlue, colorTwo: customLightBlue)
         let bgView = UIView.init(frame: self.tableView.frame)
         bgView.layer.insertSublayer(gradientLayer, at: 0)
         self.tableView.backgroundView = bgView
+        
+        //1
+        
+        guard let appDelegate =
+          UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext =
+          appDelegate.persistentContainer.viewContext
+        
+        //2
+        let fetchRequest =
+          NSFetchRequest<NSManagedObject>(entityName: "BusinessEntity")
+        
+        //3
+        do {
+          businessArray = try managedContext.fetch(fetchRequest) as! [BusinessEntity]
+        } catch let error as NSError {
+          print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
     }
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       
-      //1
-      guard let appDelegate =
-        UIApplication.shared.delegate as? AppDelegate else {
-          return
-      }
-      
-      let managedContext =
-        appDelegate.persistentContainer.viewContext
-      
-      //2
-      let fetchRequest =
-        NSFetchRequest<NSManagedObject>(entityName: "BusinessEntity")
-      
-      //3
-      do {
-        businessArray = try managedContext.fetch(fetchRequest)
-      } catch let error as NSError {
-        print("Could not fetch. \(error), \(error.userInfo)")
-      }
+     
     }
 
 
@@ -90,7 +95,7 @@ extension RestaurantsTableViewController{
       tableView.dequeueReusableCell(withIdentifier: "Cell",
                                     for: indexPath)
     cell.textLabel?.text =
-      business.value(forKeyPath: "name") as? String
+      business.name
     return cell
   }
 }
