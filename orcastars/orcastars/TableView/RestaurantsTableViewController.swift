@@ -9,42 +9,24 @@
 import UIKit
 import CoreData
 
-class RestaurantsTableViewController: UITableViewController {
+class RestaurantsTableViewController: UITableViewController{
 
-    var businessArray: [BusinessEntity] = []
+    //var businessArray = Business.convertCSVIntoArray()
+    var specificBusinessArray: [Business] = []
+    var tableTitle: String = "Businesses"
     let identifier: String = "tableCell"
     let customLightBlue = UIColor(red: 190/255, green: 209/255, blue: 224/255, alpha: 1)
     let customBlue = UIColor(red: 5/255, green: 129/255, blue: 198/255, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         setupUI()
         let gradientLayer = view.setGradientBackground(colorOne: customBlue, colorTwo: customLightBlue)
         let bgView = UIView.init(frame: self.tableView.frame)
         bgView.layer.insertSublayer(gradientLayer, at: 0)
         self.tableView.backgroundView = bgView
-        
-        //1
-        
-        guard let appDelegate =
-          UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext =
-          appDelegate.persistentContainer.viewContext
-        
-        //2
-        let fetchRequest =
-          NSFetchRequest<NSManagedObject>(entityName: "BusinessEntity")
-        
-        //3
-        do {
-          businessArray = try managedContext.fetch(fetchRequest) as! [BusinessEntity]
-        } catch let error as NSError {
-          print("Could not fetch. \(error), \(error.userInfo)")
-        }
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -53,14 +35,12 @@ class RestaurantsTableViewController: UITableViewController {
      
     }
 
-
-
     // MARK: Segue Method
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "restaurantsDetail",
             let indexPath = tableView?.indexPathForSelectedRow,
             let destinationViewController: DetailViewController = segue.destination as? DetailViewController {
-            destinationViewController.business = businessArray[indexPath.row]
+            destinationViewController.business = specificBusinessArray[indexPath.row]
         }
     }
 
@@ -70,7 +50,8 @@ extension RestaurantsTableViewController {
 
     func setupUI() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: self, action: nil)
-        navigationItem.title = "Restaurants"
+        
+        navigationItem.title = tableTitle
         tableView.reloadData()
     }
 
@@ -83,20 +64,17 @@ extension RestaurantsTableViewController {
 extension RestaurantsTableViewController{
     override func tableView(_ tableView: UITableView,
                  numberOfRowsInSection section: Int) -> Int {
-    return businessArray.count
+    return specificBusinessArray.count
   }
 
     override func tableView(_ tableView: UITableView,
                  cellForRowAt indexPath: IndexPath)
                  -> UITableViewCell {
-
-    let business = businessArray[indexPath.row]
-    let cell =
-      tableView.dequeueReusableCell(withIdentifier: "Cell",
-                                    for: indexPath)
-    cell.textLabel?.text =
-      business.name
-    return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? TableCell {
+            cell.configurateTheCell(specificBusinessArray[indexPath.row])
+            return cell
+        }
+        return UITableViewCell()
   }
 }
 

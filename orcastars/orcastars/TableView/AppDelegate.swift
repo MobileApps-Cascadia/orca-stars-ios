@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: BusinessEntity]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: Business]?) -> Bool {
         // Override point for customization after application launch.
         print("APP DELEGATE RUNNING")
         // Change the tint color for the page controllers
