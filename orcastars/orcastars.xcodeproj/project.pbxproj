@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		043F1165248B49D100E2BB7E /* MoreMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F1164248B49D100E2BB7E /* MoreMenuViewController.swift */; };
+		3F02BB502575D054007C2A46 /* businessdata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F02BB4F2575D054007C2A46 /* businessdata.csv */; };
 		3F07394B25524D74007B83F8 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07394A25524D74007B83F8 /* Business.swift */; };
 		3F257FEF246CE7C000F4EB14 /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F257FEE246CE7C000F4EB14 /* Restaurants.swift */; };
 		3F257FF1246CE90700F4EB14 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F257FF0246CE90700F4EB14 /* DetailViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		043F1164248B49D100E2BB7E /* MoreMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuViewController.swift; sourceTree = "<group>"; };
+		3F02BB4F2575D054007C2A46 /* businessdata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = businessdata.csv; sourceTree = "<group>"; };
 		3F07394A25524D74007B83F8 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		3F257FEE246CE7C000F4EB14 /* Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
 		3F257FF0246CE90700F4EB14 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		3F257FF5246CEC9300F4EB14 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				3F02BB4F2575D054007C2A46 /* businessdata.csv */,
 				3FF227BE2309E824004F1EB0 /* AppDelegate.swift */,
 				3FF632D225672BD800A88276 /* orcastars.xcdatamodeld */,
 				3FCCD369246C862B0048729A /* RestaurantsTableViewController.swift */,
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F02BB502575D054007C2A46 /* businessdata.csv in Resources */,
 				3FF227CB2309E826004F1EB0 /* LaunchScreen.storyboard in Resources */,
 				3FF227C82309E826004F1EB0 /* Assets.xcassets in Resources */,
 				3FF227C62309E824004F1EB0 /* Main.storyboard in Resources */,

@@ -18,22 +18,24 @@ class DetailViewController: UIViewController {
     @IBOutlet var photoView: UIImageView!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var hoursLabel: UILabel!
+    @IBOutlet var phoneLabel: UILabel!
     private var cornerRadius: CGFloat = 16  // corner radius for most views
     let customLightBlue = UIColor(red: 190/255, green: 209/255, blue: 224/255, alpha: 1)
     let customBlue = UIColor(red: 5/255, green: 129/255, blue: 198/255, alpha: 1)
 
-    var business: BusinessEntity?
+    var business: Business?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         if let business = business {
             navigationItem.title = business.name
-            imageView.image = UIImage(named: business.logo!)
+            imageView.image = UIImage(named: business.logo)
             nameLabel.text = business.name
-            descLabel.text = business.description
-            photoView.image = UIImage(named: business.photo!)
-            locationLabel.text = business.address
+            descLabel.text = business.desc
+            photoView.image = UIImage(named: business.photo)
+            locationLabel.text = business.address + ",\n" + business.city + ", " + business.state + " " + business.zip
             hoursLabel.text = business.hours
+            phoneLabel.text = business.phone
             photoView.layer.cornerRadius = cornerRadius
             let gradientlayer = view.setGradientBackground(colorOne: customBlue, colorTwo: customLightBlue)
             view.layer.insertSublayer(gradientlayer, at: 0)

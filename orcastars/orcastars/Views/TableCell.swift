@@ -22,9 +22,9 @@ class TableCell: UITableViewCell {
 
     // MARK: Cell Configuration
 
-    func configurateTheCell(_ restaurants: Restaurants) {
-        nameLabel.text = restaurants.name
-        thumbnailImageView.image = UIImage(named: restaurants.thumbnails)
+    func configurateTheCell(_ businesses: Business) {
+        nameLabel.text = businesses.name
+        thumbnailImageView.image = UIImage(named: businesses.logo)
     }
 
 }

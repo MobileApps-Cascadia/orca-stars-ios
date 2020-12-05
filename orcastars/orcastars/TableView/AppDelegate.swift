@@ -16,13 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: Business]?) -> Bool {
         // Override point for customization after application launch.
-        
+        print("APP DELEGATE RUNNING")
         // Change the tint color for the page controllers
         let pageController = UIPageControl.appearance()
         pageController.currentPageIndicatorTintColor = .purple
         pageController.pageIndicatorTintColor = .lightGray
+        
+//        let defaults = UserDefaults.standard
+//        let isPreloaded = defaults.bool(forKey: "isPreloaded")
+//            if !isPreloaded {
+//                preloadData()
+//                defaults.set(true, forKey: "isPreloaded")
+//            }
+        preloadData()
         
         return true
     }
@@ -93,5 +101,87 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+
+        var businesses = [Business]()
+
+        func convertCSVIntoArray() {
+
+            //locate the file you want to use
+            guard let filepath = Bundle.main.path(forResource: "businessdata", ofType: "csv") else {
+                return
+            }
+
+            //convert that file into one long string
+            var data = ""
+            do {
+                data = try String(contentsOfFile: filepath)
+            } catch {
+                print(error)
+                return
+            }
+
+            //now split that string into an array of "rows" of data.  Each row is a string.
+            let rows = data.components(separatedBy: "\n") //change let to var and uncomment line 119 if header row was included in file. In this case, it was already taken out
+            print(data)
+
+            //if you have a header row, remove it here
+            //rows.removeFirst() already removed it from file
+
+            //now loop around each row, and split it into each of its columns
+            for row in rows {
+                let columns = row.components(separatedBy: ",")
+
+                //check that we have enough columns
+                //if columns.count == 4 {
+                let id = Int32(columns[0]) ?? 0
+                let category = columns[1]
+                let name = columns[2]
+                let address = columns[3]
+                let city = columns[4]
+                let state = columns[5]
+                let zip = columns[6]
+                let phone = columns[7]
+                let longitude = Double(columns[8]) ?? 0.00
+                let latitude = Double(columns[9]) ?? 0.00
+                let desc = columns[10]
+                let hours = columns[11]
+                let logo = columns[12]
+                let photo = columns[13]
+                let logoAltText = columns[14]
+                let photoAltText = columns[15]
+                
+                let business = Business(id: id, category: category, name: name, address: address, city: city, state: state, zip: zip, phone: phone, longitude: longitude, latitude: latitude, desc: desc, hours: hours, logo: logo, photo: photo, logoAltText: logoAltText, photoAltText: photoAltText)
+                    businesses.append(business)
+                //} //end of if statement
+            }
+        }
+    
+    func preloadData () {
+        // Retrieve data from the source file
+        //if Bundle.main.url(forResource: "businessdata", withExtension: "csv") != nil {
+                    for business in businesses {
+                        let context = self.persistentContainer.viewContext
+                        let businessdata = NSEntityDescription.insertNewObject(forEntityName: "BusinessEntity", into: context) as! BusinessEntity
+                        businessdata.id = business.id
+                        businessdata.category = business.category
+                        businessdata.name = business.name
+                        businessdata.address = business.address
+                        businessdata.city = business.city
+                        businessdata.state = business.state
+                        businessdata.zip = business.zip
+                        businessdata.phone = business.phone
+                        businessdata.longitude = business.longitude
+                        businessdata.latitude = business.latitude
+                        businessdata.desc = business.desc
+                        businessdata.hours = business.hours
+                        businessdata.logo = business.logo
+                        businessdata.photo = business.photo
+                        businessdata.photoAltText = business.photoAltText
+                        businessdata.logoAltText = business.logoAltText
+                        print("DATA LOADED")
+                   // }
+        }
+    }
+     
 
 }

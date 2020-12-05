@@ -10,6 +10,16 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    var businessArray = Business.convertCSVIntoArray()
+    var specificBusinessArray: [Business] = []
+    @IBOutlet weak var restaurantButton: UIButton!
+    @IBOutlet weak var nightlifeButton: UIButton!
+    @IBOutlet weak var medicalButton: UIButton!
+    @IBOutlet weak var shoppingButton: UIButton!
+    @IBOutlet weak var autoButton: UIButton!
+    @IBOutlet weak var maintenanceButton: UIButton!
+    @IBOutlet weak var servicesButton: UIButton!
+    var tableTitle: String = ""
     // outlets to the menu button, searchbar,a and gradiant view
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var searchBar: UITextField!
@@ -27,6 +37,107 @@ class HomeViewController: UIViewController {
         let gradientlayer = view.setGradientBackground(colorOne: customBlue, colorTwo: customLightBlue)
         view.layer.insertSublayer(gradientlayer, at: 0)
     }
+//
+    @IBAction func allButtons (_ sender: Any) {
+        performSegue(withIdentifier: "segueToBusinessList", sender: sender)
+    }
+//    @IBAction func restaurantButton(_ sender: UIButton) {
+//        for row in businessArray{
+//            if (row.category == "restaurant"){
+//                specificBusinessArray.append(row)
+//            }
+//        }
+//        destinationViewController.specificBusinessArray = specificBusinessArray
+//        destinationViewController.tableTitle = "Restaurant"
+//    }
+//
+//    @IBAction func nightlifeButton(_ sender: UIButton){
+//        for row in businessArray{
+//            if (row.category == "bars"){
+//                specificBusinessArray.append(row)
+//            }
+//        }
+//        tableTitle = "Bars & Nightlife"
+//    }
+//    @IBAction func medicalButton(_ sender: UIButton){
+//        for row in businessArray{
+//            if (row.category == "health"){
+//                specificBusinessArray.append(row)
+//            }
+//        }
+//        tableTitle = "Health & Medical"
+//    }
+//    @IBAction func shoppingButton(_ sender: UIButton){
+//        for row in businessArray{
+//            if (row.category == "shopping"){
+//                specificBusinessArray.append(row)
+//            }
+//        }
+//        tableTitle = "Shopping"
+//    }
+//    @IBAction func autoButton(_ sender: UIButton){
+//        for row in businessArray{
+//            if (row.category == "auto"){
+//                specificBusinessArray.append(row)
+//            }
+//        }
+//        tableTitle = "Automotives"
+//    }
+//    @IBAction func maintenanceButton(_ sender: UIButton){
+//        for row in businessArray{
+//            if (row.category == "maintenance"){
+//                specificBusinessArray.append(row)
+//            }
+//        }
+//        tableTitle = "Home Maintenance"
+//    }
+//    @IBAction func servicesButton(_ sender: UIButton){
+//        for row in businessArray{
+//            if (row.category == "service"){
+//                specificBusinessArray.append(row)
+//            }
+//        }
+//        tableTitle = "Professional Services"
+//    }
+//
+    
+    
+
+
+    // MARK: Segue Method
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        specificBusinessArray = []
+        if segue.identifier == "segueToBusinessList"{
+            //print("IDENTIFIED")
+            if let button = sender as? UIButton{
+            let destinationViewController = segue.destination as? RestaurantsTableViewController
+                //print("VARIABLES DEFINED")
+                let category: String
+                switch button{
+                case restaurantButton: category = "restaurant"
+                case nightlifeButton: category = "bars"
+                case medicalButton: category = "health"
+                case shoppingButton: category = "shopping"
+                case autoButton: category = "auto"
+                case maintenanceButton: category = "maintenance"
+                case servicesButton: category = "service"
+                default:
+                    category = ""
+                }
+                for row in businessArray{
+                if (row.category == category){
+                    specificBusinessArray.append(row)
+                }
+            }
+            //print(specificBusinessArray)
+            //destinationViewController?.tableTitle = "Restaurants"
+            destinationViewController?.specificBusinessArray = specificBusinessArray
+        
+        }
+        }
+    }
+
 
     
     
